@@ -18,11 +18,19 @@ pattern = os.path.join(hdir,'*')
 # TODO: Remove the leading directory name(s) from each filename before you print it - 
 # using os.path.basename()
 
-file_list = glob.glob(hdir)
+file_list = glob.glob(pattern)
 print('file_list {}'.format(file_list))
 
 file_size = os.path.getsize(hdir)
-print('file_size {}'.format(file_size))
+print("The size of the directory is:",file_size,"bytes")
+
+file_removebn = os.path.basename(hdir)
+print(file_removebn)
 
 
+# print('file_size {}'.format(file_size))
 
+# if os.stat(hdir).st_size != 0:
+#     print('notzero {}'.format(file_size))
+
+os.path.basename(pattern)
